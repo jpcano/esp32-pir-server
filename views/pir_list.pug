@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div(class='page-header')
+        h2= title
+
+    each pir in pir_list
+        div(class='alert alert-info' role='alert')
+            strong #{pir.date_formatted}
+            |  #{pir.hour_formatted}
+
+    else
+        div(class="alert alert-danger" role="alert") There are no PIR events.
